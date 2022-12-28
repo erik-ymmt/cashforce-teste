@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import OrderCard from '../components/OrderCard';
 import styles from './OrdersTable.module.css';
 
 function OrdersTable() {
@@ -18,12 +19,12 @@ function OrdersTable() {
   console.log(orders);
 
   const tableHeaders = [
-    'Nota Fiscal',
-    'Sacado',
-    'Cedente',
-    'Emissão',
-    'Valor',
-    'Status',
+    'NOTA FISCAL',
+    'SACADO',
+    'CEDENTE',
+    'EMISSÃO',
+    'VALOR',
+    'STATUS',
     ' ',
   ];
 
@@ -35,7 +36,7 @@ function OrdersTable() {
         { orders.length === 0
         ? <h3> Carregando... </h3>
         :(
-          <table>
+          <table className={styles.orders_table}>
             <thead>
               <tr>
                 {tableHeaders.map((header, index) => (
@@ -44,7 +45,7 @@ function OrdersTable() {
               </tr>
             </thead>
             <tbody>
-              {/* {
+              {
                 orders.map((order) => (
                   <OrderCard
                     orderNumber={order.orderNumber}
@@ -55,7 +56,7 @@ function OrdersTable() {
                     status={order.status}
                   />
                 ))
-              } */}
+              }
             </tbody>
           </table>
         )}
