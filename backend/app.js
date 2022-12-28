@@ -1,11 +1,11 @@
 const express = require('express');
 const cors = require('cors');
-// const router = require('./routers');
+const router = require('./src/routers');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-// app.use('/home', router.home);
+app.use('/order', router.order);
 
 module.exports = app;
