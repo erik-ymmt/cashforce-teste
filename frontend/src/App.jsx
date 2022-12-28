@@ -1,4 +1,4 @@
-import FiscalNotesTable from "./containers/FiscalNotesTable";
+import OrdersTable from "./containers/OrdersTable";
 import NavBar from "./containers/NavBar";
 import './global.css'
 
@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <FiscalNotesTable />
+      <OrdersTable />
     </div>
   );
 }
