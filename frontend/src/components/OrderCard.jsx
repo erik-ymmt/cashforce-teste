@@ -24,8 +24,15 @@ function OrderCard({
       <td> {orderNumber} </td>
       <td> {buyer} </td>
       <td> {provider} </td>
-      <td> {emissionDate} </td>
-      <td> {value} </td>
+      <td>
+        {new Date(emissionDate)
+          .toLocaleDateString('pt-BR')
+        }
+        </td>
+      <td>
+        {(Number(value)/100)
+          .toLocaleString('pt-BR', { minimumFractionDigits: 2,  maximumFractionDigits: 2})}
+      </td>
       <td> {statusCode[status]} </td>
       <td>
         <div>
