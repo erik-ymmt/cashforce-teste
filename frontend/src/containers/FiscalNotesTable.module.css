@@ -1,0 +1,22 @@
+.main_container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  font-family: var(--font-1);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header {
+  height: 11vh;
+  width: 100%;
+  box-shadow: 0px -10px 30px rgba(225, 229, 236, 0.5);
+  border-bottom: 2px solid var(--light-grey);
+}
+
+.table_container {
+  height: 89vh;
+  width: 100%;
+  box-shadow: 0px 10px 30px rgba(225, 229, 236, 0.5);
+  padding: 48px;
+}

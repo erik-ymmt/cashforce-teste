@@ -3,9 +3,19 @@
   width: 288px;
   height: 100vh;
   font-family: var(--font-1);
+  font-size: 14px;
+  font-weight: 500;
   color: var(--green);
 }
 
 .logo {
   margin: 24px;
+}
+
+.navigation {
+  height: 64px;
+  display: flex;
+  gap: 14px;
+  padding: 24px;
+  border-left: 4px solid var(--green);
 }
