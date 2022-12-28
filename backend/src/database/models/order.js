@@ -1,5 +1,5 @@
 const OrderModel = (sequelize, DataType) => {
-  const User = sequelize.define('order', {
+  const Order = sequelize.define('order', {
     id: {
       type: DataType.INTEGER,
       primaryKey: true,
@@ -28,7 +28,7 @@ const OrderModel = (sequelize, DataType) => {
     deliveryCtrc: DataType.STRING,
   });
 
-  return User;
+  return Order;
 };
 
 module.exports = OrderModel;

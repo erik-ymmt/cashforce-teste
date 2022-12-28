@@ -1,7 +1,7 @@
-const { Order } = require('../database/models');
+const { order } = require('../database/models');
 
 const findAll = async () => {
-  const result = await Order.findAll();
+  const result = await order.findAll();
   return result;
 };
 
