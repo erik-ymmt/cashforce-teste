@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+:root {
+  --font-1: 'DM Sans', sans-serif;
+  
+  --green: #00AD8C;
+  --dark-blue: #021B51;
+  --light-grey: #FBFDFE;
+  --grey: #A1A8B8;
+  --white: #FFFFFF;
+}
+
+.App {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
