@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import styles from './OrderCard.module.css';
+import ProviderData from './ProviderData';
 
 function OrderCard({
   orderNumber,
@@ -9,6 +11,7 @@ function OrderCard({
   value,
   status,
 }) {
+  const [displayProviderData, setDisplayProviderData] = useState(false);
   const statusCode = [
     'Pendente de confirmação',
     'Pedido confirmado',
@@ -20,13 +23,6 @@ function OrderCard({
     'Recebida e confirmada',
     'Pagamento Autorizado',
   ];
-
-  const showProviderData = async () => {
-    const url = `http://localhost:3001/providers/${providerId}`;
-    const response = await fetch(url);
-    const providerData = response.json();
-    console.log(providerData);
-  };
 
   return (
     <tr className={styles.card_container}>
@@ -46,9 +42,17 @@ function OrderCard({
         {styles[`color-${status}`]}
       </td>
       <td>
-        <div onClick={showProviderData} className={styles.data_btn}>
+        <div
+          onClick={() => setDisplayProviderData(!displayProviderData)}
+          className={styles.data_btn}
+        >
           Dados do cedente
         </div>
+        <ProviderData
+          display={displayProviderData}
+          setDisplayProviderData={setDisplayProviderData}
+          providerId={providerId}
+        />
       </td>
     </tr>
   );
