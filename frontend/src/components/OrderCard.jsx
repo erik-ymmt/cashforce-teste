@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types"
 import { useState } from 'react';
 import styles from './OrderCard.module.css';
 import ProviderData from './ProviderData';
@@ -56,6 +58,16 @@ function OrderCard({
       </td>
     </tr>
   );
+}
+
+OrderCard.propTypes = {
+  buyer: PropTypes.string,
+  emissionDate: PropTypes.string,
+  orderNumber: PropTypes.string,
+  provider: PropTypes.string,
+  providerId: PropTypes.number,
+  status: PropTypes.string,
+  value: PropTypes.string
 }
 
 export default OrderCard;

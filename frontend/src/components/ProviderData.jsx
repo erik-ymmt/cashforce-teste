@@ -1,3 +1,5 @@
+import PropTypes from "prop-types"
+import React from "react";
 import { useEffect, useState } from 'react';
 import styles from './ProviderData.module.css';
 
@@ -32,6 +34,12 @@ function ProviderData({ display, setDisplayProviderData, providerId }) {
       </div>
     </div>
   );
+}
+
+ProviderData.propTypes = {
+  display: PropTypes.bool,
+  providerId: PropTypes.number,
+  setDisplayProviderData: PropTypes.func
 }
 
 export default ProviderData;
