@@ -47,7 +47,6 @@
 }
 
 .orders_table th {
-  /* padding: 15px 0px; */
   color: var(--grey);
   font-size: 12px;
 }
