@@ -1,10 +1,16 @@
 const { provider } = require('../database/models');
 
-const findAll = async () => {
-  const result = await provider.findAll();
+const findOne = async (id) => {
+  const result = await provider.findOne(
+    {
+      where: {
+        id,
+      },
+    },
+  );
   return result;
 };
 
 module.exports = {
-  findAll,
+  findOne,
 };

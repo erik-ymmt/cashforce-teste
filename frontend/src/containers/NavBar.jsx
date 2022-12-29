@@ -7,7 +7,9 @@ import handShake from '../assets/handShake.svg';
 function NavBar() {
   return (
     <div className={styles.container}>
-      <img className={styles.logo} src={logo} alt="cashforce logo" />
+      <a href="https://cashforce.com.br/" target="_blank">
+        <img className={styles.logo} src={logo} alt="cashforce logo" />
+      </a>
       <nav className={styles.navigation}>
         <img src={handShake} alt="handshake" />
         <span>Notas fiscais</span>

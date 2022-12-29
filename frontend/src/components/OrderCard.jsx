@@ -1,16 +1,19 @@
+import React from "react";
+import PropTypes from "prop-types"
+import { useState } from 'react';
 import styles from './OrderCard.module.css';
+import ProviderData from './ProviderData';
 
 function OrderCard({
   orderNumber,
   buyer,
   provider,
+  providerId,
   emissionDate,
   value,
   status,
 }) {
-  console.log(buyer);
-  console.log(provider);
-
+  const [displayProviderData, setDisplayProviderData] = useState(false);
   const statusCode = [
     'Pendente de confirmação',
     'Pedido confirmado',
@@ -22,6 +25,7 @@ function OrderCard({
     'Recebida e confirmada',
     'Pagamento Autorizado',
   ];
+
   return (
     <tr className={styles.card_container}>
       <td> {orderNumber} </td>
@@ -40,10 +44,30 @@ function OrderCard({
         {styles[`color-${status}`]}
       </td>
       <td>
-        <div className={styles.data_btn}>Dados do cedente</div>
+        <div
+          onClick={() => setDisplayProviderData(!displayProviderData)}
+          className={styles.data_btn}
+        >
+          Dados do cedente
+        </div>
+        <ProviderData
+          display={displayProviderData}
+          setDisplayProviderData={setDisplayProviderData}
+          providerId={providerId}
+        />
       </td>
     </tr>
   );
+}
+
+OrderCard.propTypes = {
+  buyer: PropTypes.string,
+  emissionDate: PropTypes.string,
+  orderNumber: PropTypes.string,
+  provider: PropTypes.string,
+  providerId: PropTypes.number,
+  status: PropTypes.string,
+  value: PropTypes.string
 }
 
 export default OrderCard;

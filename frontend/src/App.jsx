@@ -1,3 +1,4 @@
+import React from "react";
 import OrdersTable from './containers/OrdersTable';
 import NavBar from './containers/NavBar';
 import './global.css';

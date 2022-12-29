@@ -61,6 +61,7 @@ function OrdersTable() {
                   orderNumber={order.orderNumber}
                   buyer={order.buyer.name}
                   provider={order.provider.name}
+                  providerId={order.providerId}
                   emissionDate={order.emissionDate}
                   value={order.value}
                   status={order.orderStatusBuyer}
