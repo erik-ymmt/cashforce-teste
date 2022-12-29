@@ -15,6 +15,7 @@
 }
 
 .table_container {
+  color: var(--dark-grey);
   height: 89vh;
   width: 100%;
   box-shadow: 0px 10px 30px rgba(225, 229, 236, 0.5);
@@ -36,7 +37,6 @@
 
 .orders_table td {
   padding: 15px 30px;
-  color: var(--dark-grey);
   font-size: 14px;
   border-top: 1px solid var(--light-grey);
   border-bottom: 1px solid var(--light-grey);

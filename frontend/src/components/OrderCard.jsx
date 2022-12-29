@@ -29,13 +29,16 @@ function OrderCard({
           .toLocaleDateString('pt-BR')
         }
         </td>
-      <td>
-        {(Number(value)/100)
+      <td className={styles.value}>
+        R$ {(Number(value)/100)
           .toLocaleString('pt-BR', { minimumFractionDigits: 2,  maximumFractionDigits: 2})}
       </td>
-      <td> {statusCode[status]} </td>
+      <td className={styles[`color_${status}`]}>
+        {statusCode[status]}
+        {styles[`color-${status}`]}
+      </td>
       <td>
-        <div>
+        <div className={styles.data_btn}>
           Dados do cedente
         </div>
       </td>

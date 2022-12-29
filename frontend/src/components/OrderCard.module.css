@@ -1,8 +1,21 @@
-.card_container {
-  border-collapse: collapse;
-  border-spacing: 0 50px;
+.data_btn {
+  width: 168px;
+  height: 32px;
+  padding: 8px 29px;
+  border: 1px solid var(--light-grey);
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
-.card_container td {
+.color_0, .color_5, .color_6 {
+  color: var(--yellow);
+}
 
+.color_2, .color_3, .color_4 {
+  color: var(--red);
+}
+
+.value, .color_1, .color_7, .color_8 {
+  color: var(--green);
 }

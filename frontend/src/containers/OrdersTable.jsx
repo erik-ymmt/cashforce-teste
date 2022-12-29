@@ -46,14 +46,15 @@ function OrdersTable() {
             </thead>
             <tbody>
               {
-                orders.map((order) => (
+                orders.map((order, index) => (
                   <OrderCard
+                    key={`${order.orderNumber}-${index}`}
                     orderNumber={order.orderNumber}
                     buyer={order.buyerId}
                     provider={order.providerId}
                     emissionDate={order.emissionDate}
                     value={order.value}
-                    status={order.status}
+                    status={order.orderStatusBuyer}
                   />
                 ))
               }

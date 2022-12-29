@@ -3,13 +3,15 @@
 :root {
   --font-1: 'DM Sans', sans-serif;
   
-  --green: #00AD8C;
   --dark-blue: #021B51;
   --ultra-light-grey: #FBFDFE;
   --light-grey: #DFE2EB;
   --grey: #A1A8B8;
   --dark-grey: #4D5566;
   --white: #FFFFFF;
+  --green: #00AD8C;
+  --yellow: #9c7a56;
+  --red: #a3504f;
 }
 
 .App {
