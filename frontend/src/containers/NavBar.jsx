@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './NavBar.module.css';
 
-import logo from '../assets/cashforceLogo.svg'
-import handShake from '../assets/handShake.svg'
+import logo from '../assets/cashforceLogo.svg';
+import handShake from '../assets/handShake.svg';
 
 function NavBar() {
   return (

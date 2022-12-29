@@ -27,23 +27,20 @@ function OrderCard({
       <td> {orderNumber} </td>
       <td> {buyer} </td>
       <td> {provider} </td>
-      <td>
-        {new Date(emissionDate)
-          .toLocaleDateString('pt-BR')
-        }
-        </td>
+      <td>{new Date(emissionDate).toLocaleDateString('pt-BR')}</td>
       <td className={styles.value}>
-        R$ {(Number(value)/100)
-          .toLocaleString('pt-BR', { minimumFractionDigits: 2,  maximumFractionDigits: 2})}
+        R${' '}
+        {(Number(value) / 100).toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })}
       </td>
       <td className={styles[`color_${status}`]}>
         {statusCode[status]}
         {styles[`color-${status}`]}
       </td>
       <td>
-        <div className={styles.data_btn}>
-          Dados do cedente
-        </div>
+        <div className={styles.data_btn}>Dados do cedente</div>
       </td>
     </tr>
   );

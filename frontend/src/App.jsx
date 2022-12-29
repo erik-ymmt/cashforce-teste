@@ -1,6 +1,6 @@
-import OrdersTable from "./containers/OrdersTable";
-import NavBar from "./containers/NavBar";
-import './global.css'
+import OrdersTable from './containers/OrdersTable';
+import NavBar from './containers/NavBar';
+import './global.css';
 
 function App() {
   return (
