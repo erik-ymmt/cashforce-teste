@@ -8,6 +8,11 @@
   font-weight: 700;
 }
 
+.data_btn:hover {
+  background-color: var(--ultra-light-grey);
+  cursor: pointer;
+}
+
 .color_0, .color_5, .color_6 {
   color: var(--yellow);
 }

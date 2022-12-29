@@ -3,6 +3,8 @@ import { useState } from 'react';
 import OrderCard from '../components/OrderCard';
 import styles from './OrdersTable.module.css';
 
+import blueHandShake from '../assets/blueHandShake.svg'
+
 function OrdersTable() {
   const [orders, setOrders] = useState([]);
 
@@ -30,7 +32,11 @@ function OrdersTable() {
     <div className={styles.main_container}>
       <header className={styles.header}></header>
       <div className={styles.table_container}>
-        <h3> Notas Fiscais </h3>
+        <h3 className={styles.title}>
+          <img className={styles.handIcon} src={blueHandShake} alt="handshake" />
+          Notas fiscais
+        </h3>
+        <p className={styles.subTitle}> Visualize as notas fiscais que você tem. </p>
         { orders.length === 0
         ? <h3> Carregando... </h3>
         :(
