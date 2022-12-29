@@ -4,13 +4,11 @@ function OrderCard({
   orderNumber,
   buyer,
   provider,
+  providerId,
   emissionDate,
   value,
   status,
 }) {
-  console.log(buyer);
-  console.log(provider);
-
   const statusCode = [
     'Pendente de confirmação',
     'Pedido confirmado',
@@ -22,6 +20,14 @@ function OrderCard({
     'Recebida e confirmada',
     'Pagamento Autorizado',
   ];
+
+  const showProviderData = async () => {
+    const url = `http://localhost:3001/providers/${providerId}`;
+    const response = await fetch(url);
+    const providerData = response.json();
+    console.log(providerData);
+  };
+
   return (
     <tr className={styles.card_container}>
       <td> {orderNumber} </td>
@@ -40,7 +46,9 @@ function OrderCard({
         {styles[`color-${status}`]}
       </td>
       <td>
-        <div className={styles.data_btn}>Dados do cedente</div>
+        <div onClick={showProviderData} className={styles.data_btn}>
+          Dados do cedente
+        </div>
       </td>
     </tr>
   );
