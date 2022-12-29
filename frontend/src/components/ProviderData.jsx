@@ -23,8 +23,8 @@ function ProviderData({ display, setDisplayProviderData, providerId }) {
           <div> Loading... </div>
         ) : (
           <ul>
-            <li> Nome: {providerData.name} </li>
-            <li> Razão Social: {providerData.tradingName} </li>
+            <li> Nome: {providerData.name || 'não informado' } </li>
+            <li> Razão Social: {providerData.tradingName || 'não informado' } </li>
             <li> Site: {providerData.website || 'não informado' } </li>
           </ul>
         )}
