@@ -8,6 +8,9 @@ function OrderCard({
   value,
   status,
 }) {
+  console.log(buyer);
+  console.log(provider);
+
   const statusCode = [
     'Pendente de confirmação',
     'Pedido confirmado',

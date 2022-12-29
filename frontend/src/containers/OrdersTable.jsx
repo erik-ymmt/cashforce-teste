@@ -16,8 +16,6 @@ function OrdersTable() {
     fetchAllOrders();
   }, []);
 
-  console.log(orders);
-
   const tableHeaders = [
     'NOTA FISCAL',
     'SACADO',
@@ -50,8 +48,8 @@ function OrdersTable() {
                   <OrderCard
                     key={`${order.orderNumber}-${index}`}
                     orderNumber={order.orderNumber}
-                    buyer={order.buyerId}
-                    provider={order.providerId}
+                    buyer={order.buyer.name}
+                    provider={order.provider.name}
                     emissionDate={order.emissionDate}
                     value={order.value}
                     status={order.orderStatusBuyer}
