@@ -9,7 +9,16 @@ Aplicação desenvolvida durante o teste técnico da empresa Cashforce.
 A aplicação vai rodar nas portas 3000(front-end), 3001(back-end) e 3002(banco de dados). Portanto, antes da execução, elas devem estar disponíveis na sua máquina local.
 
 ## Front-end
-![cashforce](https://user-images.githubusercontent.com/92269952/210022184-00f661ff-8b95-47de-bb8e-b88a267f193a.gif)
+
+<details>
+  <summary>Demonstração Front-end</summary>
+  <img src="imgs/cashforce.gif" width="800px" >  
+</details>
+
+<details>
+  <summary>Front-end Alta Resolução</summary>
+  <img src="cashforceTeste.png" width="800px" >  
+</details>
 
 ## Como Rodar Localmente
 - ``git clone git@github.com:erik-ymmt/cashforce-teste.git``
