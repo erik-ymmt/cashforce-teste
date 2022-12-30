@@ -11,13 +11,13 @@ A aplicação vai rodar nas portas 3000(front-end), 3001(back-end) e 3002(banco 
 ## Front-end
 
 <details>
-  <summary>Demonstração Front-end</summary>
+  <summary>GIF Demonstração Front-end</summary>
   <img src="imgs/cashforce.gif" width="800px" >  
 </details>
 
 <details>
-  <summary>Front-end Alta Resolução</summary>
-  <img src="cashforceTeste.png" width="800px" >  
+  <summary>Imagem Front-end - Alta Resolução</summary>
+  <img src="imgs/cashforceTeste.png" width="800px" >  
 </details>
 
 ## Como Rodar Localmente
