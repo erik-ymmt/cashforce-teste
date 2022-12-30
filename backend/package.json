@@ -4,7 +4,6 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate",
     "start": "nodemon ./src/server.js",
     "test": "mocha tests/*.js --exit"
   },

@@ -40,6 +40,6 @@ services:
       - MYSQL_ROOT_PASSWORD=password
     restart: 'always'
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      timeout: 10s
+      test: "exit 0"
+      timeout: 100s
       retries: 5
